@@ -1,0 +1,10 @@
+curl.exe --silent --show-error --fail https://api.github.com/repos/Duy-Phan96/expressBookReviews | ConvertFrom-Json | Select-Object html_url, fork, private, default_branch, @{Name='parent';Expression={$_.parent.full_name}}, @{Name='source';Expression={$_.source.full_name}} | ConvertTo-Json
+
+{
+  "html_url": "https://github.com/Duy-Phan96/expressBookReviews",
+  "fork": true,
+  "private": false,
+  "default_branch": "main",
+  "parent": "ibm-developer-skills-network/expressBookReviews",
+  "source": "ibm-developer-skills-network/expressBookReviews"
+}

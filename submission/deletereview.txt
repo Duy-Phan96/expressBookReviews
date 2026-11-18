@@ -1,0 +1,11 @@
+curl.exe '--silent' '--show-error' '--max-time' '10' '--write-out' '\nHTTP %{http_code}' '--cookie' 'cookies.txt' '--request' 'DELETE' 'http://127.0.0.1:5000/customer/auth/review/8'
+
+HTTP status: 200
+JSON response:
+{"message":"Review deleted.","isbn":"8","username":"ibm-review-demo"}
+
+curl.exe '--silent' '--show-error' '--max-time' '10' '--write-out' '\nHTTP %{http_code}' 'http://127.0.0.1:5000/review/8'
+
+HTTP status: 200
+JSON response:
+{}

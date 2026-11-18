@@ -1,0 +1,5 @@
+curl.exe '--silent' '--show-error' '--max-time' '10' '--write-out' '\nHTTP %{http_code}' '--cookie-jar' 'cookies.txt' '--json' '{"username":"ibm-review-demo","password":"course-demo-password"}' 'http://127.0.0.1:5000/customer/login'
+
+HTTP status: 200
+JSON response:
+{"message":"Login successful."}

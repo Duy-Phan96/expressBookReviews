@@ -1,0 +1,5 @@
+curl.exe '--silent' '--show-error' '--max-time' '10' '--write-out' '\nHTTP %{http_code}' 'http://127.0.0.1:5000/review/8'
+
+HTTP status: 200
+JSON response:
+{"ibm-review-demo":"Sharp social commentary and memorable characters."}

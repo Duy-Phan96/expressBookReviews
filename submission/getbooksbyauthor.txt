@@ -1,0 +1,5 @@
+curl.exe '--silent' '--show-error' '--max-time' '10' '--write-out' '\nHTTP %{http_code}' 'http://127.0.0.1:5000/author/Unknown'
+
+HTTP status: 200
+JSON response:
+[{"author":"Unknown","title":"The Epic Of Gilgamesh","reviews":{}},{"author":"Unknown","title":"The Book Of Job","reviews":{}},{"author":"Unknown","title":"One Thousand and One Nights","reviews":{}},{"author":"Unknown","title":"Njál's Saga","reviews":{}}]

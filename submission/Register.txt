@@ -1,0 +1,5 @@
+curl.exe '--silent' '--show-error' '--max-time' '10' '--write-out' '\nHTTP %{http_code}' '--json' '{"username":"ibm-review-demo","password":"course-demo-password"}' 'http://127.0.0.1:5000/register'
+
+HTTP status: 201
+JSON response:
+{"message":"Registration successful.","username":"ibm-review-demo"}

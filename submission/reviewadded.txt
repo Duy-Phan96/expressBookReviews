@@ -1,0 +1,11 @@
+curl.exe '--silent' '--show-error' '--max-time' '10' '--write-out' '\nHTTP %{http_code}' '--cookie' 'cookies.txt' '--request' 'PUT' '--json' '{"review":"A memorable novel with sharp social commentary."}' 'http://127.0.0.1:5000/customer/auth/review/8'
+
+HTTP status: 201
+JSON response:
+{"message":"Review added.","isbn":"8","username":"ibm-review-demo","review":"A memorable novel with sharp social commentary."}
+
+curl.exe '--silent' '--show-error' '--max-time' '10' '--write-out' '\nHTTP %{http_code}' '--cookie' 'cookies.txt' '--request' 'PUT' 'http://127.0.0.1:5000/customer/auth/review/8?review=Sharp%20social%20commentary%20and%20memorable%20characters.'
+
+HTTP status: 200
+JSON response:
+{"message":"Review updated.","isbn":"8","username":"ibm-review-demo","review":"Sharp social commentary and memorable characters."}
